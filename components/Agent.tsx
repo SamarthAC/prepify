@@ -1,6 +1,7 @@
 import React, {useCallback} from 'react'
 import Image from "next/image";
 import {cn} from "@/lib/utils";
+import { VapiClient } from '@vapi-ai/server-sdk';
 
 enum CallStatus{
     INACTIVE = "INACTIVE",
@@ -9,6 +10,7 @@ enum CallStatus{
     FINISHED = "FINISHED",
 }
 
+const vapiClient = new VapiClient({ token: 'process.env.NEXT_PUBLIC_VAPI_WEB_TOKEN', });
 
 const Agent = ({userName}:AgentProps) => {
 
