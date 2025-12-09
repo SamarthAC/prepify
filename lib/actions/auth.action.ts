@@ -5,6 +5,9 @@ import {cookies} from "next/headers";
 import {firestore} from "firebase-admin";
 import { DocumentData } from 'firebase-admin/firestore';
 import CollectionReference = firestore.CollectionReference;
+import {generateObject} from "ai";
+import {google} from "@ai-sdk/google";
+import {feedbackSchema} from "@/constants";
 
 const ONE_WEEK= 60*60*24*7;
 
